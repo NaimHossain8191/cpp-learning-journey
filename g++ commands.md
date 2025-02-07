@@ -46,20 +46,19 @@
 ### 🔹 One-Liner for Large Projects
 
     g++ -o my_program *.cpp
-    
     ./my_program
 
 
 ## Automate with **`.bat`** script
 
     @echo off
-        g++ -Wall -Wextra -std=c++17 -o my_program main.cpp utils.cpp
-        if %errorlevel% neq 0 (
-            echo Compilation failed.
-            exit /b %errorlevel%
-        )
-        echo Compilation successful. Running program...
-        my_program.exe
+    g++ -Wall -Wextra -std=c++17 -o my_program main.cpp utils.cpp
+    if %errorlevel% neq 0 (
+        echo Compilation failed.
+        exit /b %errorlevel%
+    )
+    echo Compilation successful. Running program...
+    my_program.exe
 
 Save it as **`build.bat`** in the same folder as your C++ files.
 Run it.
